@@ -1,4 +1,6 @@
-package vitalya.lib;
+package vitalya.lib.matrix;
+
+import vitalya.lib.Matrix;
 
 public class NeuralNetwork {
 
@@ -18,13 +20,14 @@ public class NeuralNetwork {
         this.output = output;
 
         this.learnKof = learnKof;
+        matrix_input = new Matrix(new double[this.hidden][this.input]);
+        matrix_out = new Matrix(new double[this.output][this.hidden]);
 
-        try {
-            matrix_input = new Matrix(new double[this.hidden][this.input]);
-            matrix_out = new Matrix(new double[this.output][this.hidden]);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        matrix_input.setRandMatrix();
+        matrix_out.setRandMatrix();
+
+        matrix_input.print();
+        matrix_out.print();
     }
 
     public void train(){}
