@@ -1,6 +1,6 @@
-package vitalya.lib.matrix;
+package vitalya.lib.neuralnetwork;
 
-import vitalya.lib.Matrix;
+import vitalya.lib.matrix.Matrix;
 
 public class NeuralNetwork {
 
